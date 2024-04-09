@@ -1,4 +1,4 @@
-
+#this is my first workflow
 name: java_installation_workflow
 on:
   pull_request:
@@ -24,10 +24,11 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-      - name: Set up JDK 11
+      - name: Set up JDK 11   #distribution added
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'adopt'
              
 
    
