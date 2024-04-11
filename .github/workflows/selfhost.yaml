@@ -1,5 +1,5 @@
 #this is my first workflow
-name: java_installation_workflow
+name: self_hosted_runner_workflow
 on:
    #just want to trigger the workflow manually, you should only keep the workflow_dispatch
  workflow_dispatch:
