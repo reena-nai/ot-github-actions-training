@@ -1,0 +1,21 @@
+#this is my first workflow
+name: java_installation_workflow
+on:
+   #just want to trigger the workflow manually, you should only keep the workflow_dispatch
+ workflow_dispatch:
+jobs:
+  build:
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+        
+      - name: Set up JDK 11   #distribution added
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'
+          distribution: 'adopt'
+             
